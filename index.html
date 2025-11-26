@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Course Explorer</h1>
+
+<section id="loader">
+    <h2>Load Courses (JSON)</h2>
+    <input type="file" id="fileInput" accept=".json">
+    <p id="errorMsg" class="error"></p>
+</section>
+
+<section id="filters">
+    <h2>Filters</h2>
+    <label>Department:
+        <select id="filterDepartment">
+            <option value="All">All</option>
+        </select>
+    </label>
+
+    <label>Level:
+        <select id="filterLevel">
+            <option value="All">All</option>
+        </select>
+    </label>
+
+    <label>Instructor:
+        <select id="filterInstructor">
+            <option value="All">All</option>
+        </select>
+    </label>
+</section>
+
+<section id="sorting">
+    <h2>Sort Courses</h2>
+    <select id="sortSelect">
+        <option value="titleAsc">Title A–Z</option>
+        <option value="titleDesc">Title Z–A</option>
+        <option value="id">Course ID</option>
+        <option value="semester">Semester</option>
+    </select>
+</section>
+
+<section id="courseList"></section>
+
+<section id="courseDetails" class="details"></section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
